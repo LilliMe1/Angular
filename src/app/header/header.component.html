@@ -1,0 +1,28 @@
+<ul>
+  <li>
+    <a routerLink="./">
+    Home
+    </a>
+  </li>
+  <li>
+    <a routerLink="./products">
+    Products
+    </a>
+  </li>
+  <li (click)="showServiceSubmenu = true" (mouseenter)="showServiceSubmenu = true" (mouseleave)="showServiceSubmenu = !true">
+    <a>
+    Service
+    </a>
+    <ul *ngIf="showServiceSubmenu">
+      <li>
+        <a routerLink="./services/webdev">Web Devlopment</a>
+      </li>
+      <li>
+        <a routerLink="./services/mobiledev">Mobile Devlopment</a>
+      </li>
+      <li>
+        <a routerLink="./services/clouddev">Cloud Devlopment</a>
+      </li>
+    </ul>
+  </li>
+</ul>
